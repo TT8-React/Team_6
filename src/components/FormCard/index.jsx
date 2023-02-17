@@ -3,7 +3,8 @@ import Button from "../Button";
 import FormQuestion from "../FormQuestion";
 import FormTitle from "../FormTitle";
 import InputCard from "../InputCard";
-import { DivButton, DivFormCard } from "./style";
+import NavButton from "../NavButton";
+import { DivButton, DivFormCard, DivQuestion } from "./style";
 
 const FormCard = () => {
   return (
@@ -15,6 +16,10 @@ const FormCard = () => {
       <DivButton>
         <Button name="LOG IN" />
       </DivButton>
+      <DivQuestion>
+        <FormQuestion Ques="Don’t have an account ?" />
+        <NavButton name="Sign up" />
+      </DivQuestion>
     </DivFormCard>
   );
 };
