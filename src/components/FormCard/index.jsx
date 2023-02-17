@@ -1,27 +1,20 @@
 import React from "react";
-import Button from "../Button";
-import FormQuestion from "../FormQuestion";
-import FormTitle from "../FormTitle";
-import InputCard from "../InputCard";
-import NavButton from "../NavButton";
-import { DivButton, DivFormCard, DivQuestion } from "./style";
+import styled from "styled-components";
 
-const FormCard = () => {
-  return (
-    <DivFormCard>
-      <FormTitle title="LOG IN" />
-      <InputCard label="Email ID" disc="Enter Email ID" typeInput="email" />
-      <InputCard label="Password" disc="Enter password" typeInput="Password" />
-      <FormQuestion Ques="Forgotpassword ?" />
-      <DivButton>
-        <Button name="LOG IN" />
-      </DivButton>
-      <DivQuestion>
-        <FormQuestion Ques="Don’t have an account ?" />
-        <NavButton name="Sign up" />
-      </DivQuestion>
-    </DivFormCard>
-  );
+const DivFormCard = styled.div`
+  background: #f8f8f8;
+  border: 1px solid #000000;
+  border-radius: 30px;
+  width: 522px;
+  padding: 65px 83px 32px 79px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+`;
+
+const FormCard = ({ children }) => {
+  return <DivFormCard>{children}</DivFormCard>;
 };
 
 export default FormCard;

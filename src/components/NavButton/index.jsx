@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+
 import styled from "styled-components";
 
 const Navbtn = styled.button`
@@ -14,14 +14,29 @@ const Navbtn = styled.button`
   margin-left: 0.3rem;
 `;
 
-const NavButton = ({ name, path }) => {
-  return (
-    <div>
-      <NavLink to={`/${path}`}>
+const Navbtn1 = styled.button`
+  padding: 0px 16px;
+  height: 40px;
+  background: #000000;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+`;
+
+const NavButton = ({ name, type }) => {
+  if (type === "navigate") {
+    return (
+      <div>
         <Navbtn>{name}</Navbtn>
-      </NavLink>
-    </div>
-  );
+      </div>
+    );
+  } else {
+    return (
+      <div>
+        <Navbtn1>{name}</Navbtn1>
+      </div>
+    );
+  }
 };
 
 export default NavButton;
