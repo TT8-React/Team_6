@@ -11,6 +11,7 @@ const Buttons = styled.button`
   line-height: 19px;
   color: #ffffff;
   height: 40px;
+  cursor: pointer;
 `;
 
 const Button = ({ name }) => {
