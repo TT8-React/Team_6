@@ -7,7 +7,9 @@ function App() {
     <div className="App">
       <BrowserRouter>
       </BrowserRouter>
-      <LayOut />
+      <LayOut>
+        <div>from children</div>
+      </LayOut>
       <GlobalStyle />
     </div>
   );

@@ -9,8 +9,8 @@ import {
 } from "./style";
 
 export default function SideBar() {
-  const [ReportMenu, SetReportMenu] = useState(true);
-  const [AnalyticsMenu, SetAnalyticsMenu] = useState(true);
+  const [ReportMenu, SetReportMenu] = useState(false);
+  const [AnalyticsMenu, SetAnalyticsMenu] = useState(false);
 
   const HandleReport = () => {
     SetReportMenu((prevstate) => !prevstate);
