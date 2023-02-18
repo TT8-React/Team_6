@@ -18,8 +18,8 @@ export default function LayOut(props) {
     <LayOutBox>
       <SideBar />
       <RightBox>
-        <Header title="Dashboard" />
-        <div> here will put the children {props.children} </div>
+        <Header title={props.title} />
+        <div> {props.children} </div>
       </RightBox>
     </LayOutBox>
   );

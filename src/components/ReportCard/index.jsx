@@ -20,7 +20,6 @@ const Reports = styled.div`
 `;
 
 const ReportTitle = styled.p`
-  width: 99px;
   height: 22px;
 
   font-family: "Arial";
@@ -28,11 +27,12 @@ const ReportTitle = styled.p`
   font-size: 18px;
   line-height: 22px;
   color: #000000;
-  padding: 20px 30px;
+  display: flex;
+  justify-content: center;
 `;
-const ReportCard = ({ title }) => {
+const ReportCard = ({ title, onClick }) => {
   return (
-    <ReportDiv>
+    <ReportDiv onClick={onClick}>
       <Reports></Reports>
       <ReportTitle>{title}</ReportTitle>
     </ReportDiv>
