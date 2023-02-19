@@ -4,6 +4,10 @@ export const SideBarBox = styled.div`
   background-color: #efefef;
   width: 270px;
   padding: 25px 21px 25px 41px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
 `;
 
 export const Logo = styled.h2`
