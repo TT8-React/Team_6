@@ -3,11 +3,9 @@ import styled from "styled-components";
 import { detailCardData } from "../../mock/data";
 
 const Card = styled.div`
-  margin: 10% 17%;
-  width: 1100px;
-  
+  /* width: 1200px; */
+  width: 92%;
   padding: 20px;
-  
   background: #f2f2f2;
   border: 1px solid #989898;
   border-radius: 10px;

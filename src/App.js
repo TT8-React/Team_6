@@ -1,5 +1,5 @@
-import React from "react";
-import { Route, Routes } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Navigate, Route, Routes } from "react-router-dom";
 
 //pages
 import Login from "./pages/Login/index";
@@ -15,26 +15,82 @@ import Report from "./pages/Report/index";
 import GriReport from "./pages/GriReport/index";
 import SebiReport from "./pages/SebiReport/index";
 import CustomizeReport from "./pages/CustomizeReport/index";
+import  { useAuthContext } from "./contexts/AuthContext";
+import CompanyDetails from "./pages/CompanyDetails";
 
 const App = () => {
+ const { isAuthorized, setisAuthorized } = useAuthContext();
+
+ 
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      setisAuthorized(true);
+    }
+  }, [setisAuthorized]);
+  
   return (
     <div>
       <Routes>
-        <Route index element={<Login />} />
-
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/forgotpassword" element={<ForgotPass />} />
-        <Route path="/verification" element={<Verification />} />
-        <Route path="/verified" element={<Verified />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/environment" element={<Environment />} />
-        <Route path="/governance" element={<Governance />} />
-        <Route path="/social" element={<Social />} />
-        <Route path="/report" element={<Report />} />
-        <Route path="/griReport" element={<GriReport />} />
-        <Route path="/sebiReport" element={<SebiReport />} />
-        <Route path="/customizeReport" element={<CustomizeReport />} />
+        <Route index element={isAuthorized ? <Dashboard /> : <Login />} />
+        <Route
+          path="/login"
+          element={isAuthorized ? <Navigate to="/dashboard" /> : <Login />}
+        />
+        <Route
+          path="/signup"
+          element={isAuthorized ? <Navigate to="/dashboard" /> : <SignUp />}
+        />
+        <Route
+          path="/forgotpassword"
+          element={isAuthorized ? <ForgotPass /> : <Navigate to="/Login" />}
+        />
+        <Route
+          path="/verification"
+          element={isAuthorized ? <Verification /> : <Navigate to="/Login" />}
+        />
+        <Route
+          path="/verified"
+          element={isAuthorized ? <Verified /> : <Navigate to="/Login" />}
+        />
+        <Route
+          path="/dashboard"
+          element={isAuthorized ? <Dashboard /> : <Navigate to="/Login" />}
+        />
+        <Route
+          path="/environment"
+          element={isAuthorized ? <Environment /> : <Navigate to="/Login" />}
+        />
+        <Route
+          path="/governance"
+          element={isAuthorized ? <Governance /> : <Navigate to="/Login" />}
+        />
+        <Route
+          path="/social"
+          element={isAuthorized ? <Social /> : <Navigate to="/Login" />}
+        />
+        <Route
+          path="/report"
+          element={isAuthorized ? <Report /> : <Navigate to="/Login" />}
+        />
+        <Route
+          path="/griReport"
+          element={isAuthorized ? <GriReport /> : <Navigate to="/Login" />}
+        />
+        <Route
+          path="/sebiReport"
+          element={isAuthorized ? <SebiReport /> : <Navigate to="/Login" />}
+        />
+        <Route
+          path="/customizeReport"
+          element={
+            isAuthorized ? <CustomizeReport /> : <Navigate to="/Login" />
+          }
+        />
+        <Route
+          path="/companyDetails"
+          element={isAuthorized ? <CompanyDetails /> : <Navigate to="/Login" />}
+        />
       </Routes>
     </div>
   );

@@ -4,7 +4,7 @@ export const SideBarBox = styled.div`
   background-color: #efefef;
   width: 270px;
   padding: 25px 21px 25px 41px;
-  height: 100%;
+  min-height: 680px;
 `;
 
 export const Logo = styled.h2`

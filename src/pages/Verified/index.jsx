@@ -8,6 +8,7 @@ import NavButton from "../../components/NavButton";
 import styled from "styled-components";
 
 import { Flex } from "../../global/style";
+import { NavLink } from "react-router-dom";
 
 const Image = styled.img`
   width: 184px;
@@ -31,7 +32,9 @@ const Verified = () => {
           <Image src={succsess} alt="succsess" />
         </Flex>
         <DivNavButton>
-          <NavButton name="NEXT" />
+          <NavLink to="/dashboard">
+            <NavButton name="NEXT" />
+          </NavLink>
         </DivNavButton>
       </FormCard>
     </div>

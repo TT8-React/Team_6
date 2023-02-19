@@ -10,6 +10,7 @@ const ReportDiv = styled.div`
   align-items: center;
   background: #d9d9d9;
   border-radius: 8px;
+  cursor: pointer;
 `;
 
 const Reports = styled.div`

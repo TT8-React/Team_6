@@ -4,6 +4,8 @@ import ReportCard from "../../components/ReportCard";
 import { Allreports, Styledbtn, Styledline } from "./style";
 import LayOut from "./../../components/LayOut/index";
 import NavButton from "./../../components/NavButton/index";
+import { Link } from "react-router-dom";
+import { StyledLink } from "../Login/style";
 
 const Report = () => {
   const [showCustomizeModal, setShowCustomizeModal] = useState(false);
@@ -23,9 +25,16 @@ const Report = () => {
       </Styledbtn>
       <Styledline></Styledline>
       <Allreports>
-        <ReportCard title={"SEBI report"} />
-        <ReportCard title={"GRI report"} />
-        <ReportCard title={"Customize report"} onClick={handleReportClick} />
+        <StyledLink to="/sebiReport">
+          <ReportCard title={"SEBI report"} />
+        </StyledLink>
+        <StyledLink to="/griReport">
+          <ReportCard title={"GRI report"} />
+        </StyledLink>
+        <StyledLink to="/customizeReport">
+          <ReportCard title={"Customize report"} onClick={handleReportClick} />
+        </StyledLink>
+
         <CustomizeReportModal
           show={showCustomizeModal}
           handleClose={handleCloseModal}

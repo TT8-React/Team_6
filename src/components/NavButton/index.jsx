@@ -21,6 +21,7 @@ const Navbtn1 = styled.button`
   color: white;
   border-radius: 5px;
   font-weight: bold;
+  cursor: pointer;
 `;
 
 const NavButton = ({ name, type }) => {
