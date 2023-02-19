@@ -8,7 +8,7 @@ const Table = styled.div`
   border-collapse: collapse;
   position: absolute;
   left: 50%;
-  top: 15%;
+  top: 24.5%;
 `;
 
 const Row = styled.div`

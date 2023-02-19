@@ -10,6 +10,8 @@ export const Label = styled.label`
   line-height: 150%;
   color: #52525c;
   margin-top: 25px;
+font-family: 'Arial';
+
 `;
 export const Input = styled.input`
   margin-top: 8px;
@@ -20,4 +22,5 @@ export const Input = styled.input`
   border-radius: 8px;
   outline: none;
   padding-left: 10px;
+  display:block
 `;

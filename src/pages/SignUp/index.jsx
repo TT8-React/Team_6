@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import Button from "../../components/Button";
 import FormCard from "../../components/FormCard";
 import FormQuestion from "../../components/FormQuestion";
@@ -26,7 +27,11 @@ const SignUp = () => {
           </DivButton>
           <DivQuestion>
             <FormQuestion Ques="Already have an account ?" />
+
+            <NavLink to="/login">
+            
             <NavButton name="Login" type="navigate" />
+            </NavLink>
           </DivQuestion>
         </form>
       </FormCard>

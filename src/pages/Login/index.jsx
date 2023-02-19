@@ -7,7 +7,8 @@ import FormTitle from "../../components/FormTitle";
 import InputCard from "../../components/InputCard";
 import NavButton from "../../components/NavButton";
 
-import { DivButton, DivQuestion } from "./style";
+import { DivButton, DivQuestion, StyledLink } from "./style";
+import { NavLink } from "react-router-dom";
 
 const Login = () => {
   return (
@@ -21,13 +22,18 @@ const Login = () => {
             disc="Enter password"
             typeInput="Password"
           />
+            <StyledLink to="/forgotpassword">
+
           <FormQuestion Ques="Forgotpassword ?" />
+            </StyledLink>
           <DivButton>
             <Button name="LOG IN" />
           </DivButton>
           <DivQuestion>
             <FormQuestion Ques="Don’t have an account ?" />
-            <NavButton name="Sign up" type="navigate" />
+            <NavLink to="/signup">
+              <NavButton name="Sign up" type="navigate" />
+            </NavLink>
           </DivQuestion>
         </form>
       </FormCard>

@@ -15,11 +15,14 @@ const RightBox = styled.div`
 
 export default function LayOut(props) {
   return (
+  
+ 
+    
     <LayOutBox>
       <SideBar />
       <RightBox>
         <Header title={props.title} />
-        {props.children}
+        <div> {props.children} </div>
       </RightBox>
     </LayOutBox>
   );

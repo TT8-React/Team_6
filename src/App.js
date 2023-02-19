@@ -1,18 +1,25 @@
-import { BrowserRouter } from "react-router-dom";
-import LayOut from "./components/LayOut";
-import { GlobalStyle } from "./global/style";
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import Login from "./pages/Login/index";
+import SignUp from "./pages/SignUp/index";
+import ForgotPass from './pages/ForgotPass/index';
+import Verification from './pages/Verification/index';
+import Verified from './pages/Verified/index';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <BrowserRouter>
-      </BrowserRouter>
-      <LayOut>
-        <div>from children</div>
-      </LayOut>
-      <GlobalStyle />
+    <div>
+      <Routes>
+        <Route index element={<Login />} />
+
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/forgotpassword" element={<ForgotPass />} />
+        <Route path="/verification" element={<Verification />} />
+        <Route path="/verified" element={<Verified />} />
+      </Routes>
     </div>
   );
-}
+};
 
 export default App;

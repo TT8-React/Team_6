@@ -10,8 +10,8 @@ const Navbtn = styled.button`
   border: none;
   cursor: pointer;
   background: #f8f8f8;
-  margin-bottom: 1rem;
   margin-left: 0.3rem;
+  margin-bottom: 32px;
 `;
 
 const Navbtn1 = styled.button`

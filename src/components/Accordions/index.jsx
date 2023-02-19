@@ -10,14 +10,9 @@ const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
 ))(({ theme }) => ({
   border: `1px solid ${theme.palette.divider}`,
-  width: "550px",
-
-  "&:not(:last-child)": {
-    borderBottom: 0,
-  },
-  "&:before": {
-    display: "none",
-  },
+  width: "370px",
+  marginLeft: "260px",
+  marginTop: "10px",
 }));
 
 const AccordionSummary = styled((props) => (
@@ -32,7 +27,7 @@ const AccordionSummary = styled((props) => (
       : "rgba(0, 0, 0, .03)",
   flexDirection: "row",
   background: "#EDEDED",
-  width: "550px",
+  width: "400px",
   "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
     transform: "rotate(90deg)",
   },
@@ -46,7 +41,7 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   borderTop: "1px solid rgba(0, 0, 0, .125)",
 }));
 
-export default function CustomizedAccordions() {
+export default function Accordions() {
   const [expanded, setExpanded] = React.useState("panel1");
 
   const handleChange = (panel) => (event, newExpanded) => {
@@ -54,7 +49,7 @@ export default function CustomizedAccordions() {
   };
 
   return (
-    <div style={{ position: "absolute", left: "13%", top: "15%" }}>
+    <div style={{ position: "absolute", left: "5%", top: "23%" }}>
       <Accordion
         expanded={expanded === "panel1"}
         onChange={handleChange("panel1")}
@@ -64,8 +59,6 @@ export default function CustomizedAccordions() {
             sx={{
               fontWeight: "bold",
               background: "#EDEDED",
-              width: "500px",
-              padding: "10px",
             }}
           >
             Section A
@@ -103,8 +96,6 @@ export default function CustomizedAccordions() {
             sx={{
               fontWeight: "bold",
               background: "#EDEDED",
-              width: "500px",
-              padding: "10px",
             }}
           >
             Section B
@@ -142,8 +133,6 @@ export default function CustomizedAccordions() {
             sx={{
               fontWeight: "bold",
               background: "#EDEDED",
-              width: "500px",
-              padding: "10px",
             }}
           >
             Section C
