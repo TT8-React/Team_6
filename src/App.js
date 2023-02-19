@@ -2,9 +2,9 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Login from "./pages/Login/index";
 import SignUp from "./pages/SignUp/index";
-import ForgotPass from './pages/ForgotPass/index';
-import Verification from './pages/Verification/index';
-import Verified from './pages/Verified/index';
+import ForgotPass from "./pages/ForgotPass/index";
+import Verification from "./pages/Verification/index";
+import Verified from "./pages/Verified/index";
 
 const App = () => {
   return (
