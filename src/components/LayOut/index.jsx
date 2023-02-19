@@ -4,8 +4,6 @@ import Header from "../Header";
 import SideBar from "../SideBar";
 
 const LayOutBox = styled.div`
-  height: 100vh;
-  width: 100vw;
   display: flex;
 `;
 

@@ -18,6 +18,7 @@ padding:30px;
 const Dashboard = () => {
   return (
     <LayOut title="Dashboard">
+      
       <AllCharts>
         <Flex align="center" gap="39">
           <div>

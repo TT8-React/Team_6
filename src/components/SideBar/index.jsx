@@ -25,10 +25,16 @@ export default function SideBar() {
     <SideBarBox>
       <Logo>LOGO HERE</Logo>
       <SideBarList>
-        <li className="active">Dashboard</li>
-        <li>Company details</li>
         <li>
-          Report{" "}
+          <StyledLink to="/dashboard">Dashboard </StyledLink>
+        </li>
+
+        <li>
+          <StyledLink to="/companyDetails"> Company details </StyledLink>
+        </li>
+        <li onClick={HandleReport}>
+          <StyledLink to="/report">Report </StyledLink>
+
           <img
             style={
               ReportMenu
@@ -37,7 +43,6 @@ export default function SideBar() {
             }
             src={RightArrow}
             alt="arrow"
-            onClick={HandleReport}
           />
         </li>
         <ReportSubMenu display={ReportMenu ? "block" : "none"}>
@@ -46,7 +51,7 @@ export default function SideBar() {
           </StyledLink>
         </ReportSubMenu>
         <li>Data upload</li>
-        <li>
+        <li onClick={HandleAnalytics}>
           Analytics{" "}
           <img
             style={
@@ -56,12 +61,11 @@ export default function SideBar() {
             }
             src={RightArrow}
             alt="arrow"
-            onClick={HandleAnalytics}
           />
         </li>
         <AnalyticsSubMenu display={AnalyticsMenu ? "block" : "none"}>
           <li>
-            <StyledLink to="/enviroment">Enviroment</StyledLink>
+            <StyledLink to="/environment">Enviroment</StyledLink>
           </li>
           <li>
             <StyledLink to="/social">Social</StyledLink>
@@ -70,6 +74,7 @@ export default function SideBar() {
             <StyledLink to="/Governance">Governance</StyledLink>
           </li>
         </AnalyticsSubMenu>
+
       </SideBarList>
     </SideBarBox>
   );

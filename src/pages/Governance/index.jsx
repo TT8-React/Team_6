@@ -11,10 +11,7 @@ import styled from "styled-components";
 import { Flex } from "../../global/style";
 
 const AllCharts = styled.div`
-  position: absolute;
-  top: 8rem;
-  left: 2rem;
-  z-index: -1;
+padding:30px;
 `;
 const Governance = () => {
   return (
@@ -22,10 +19,10 @@ const Governance = () => {
       <AllCharts>
         <Flex align="center" gap="39">
           <div>
-            <ChartCard image={img1} width="601" />
+            <ChartCard image={img1} width="557" />
           </div>
           <div>
-            <ChartCard image={img1} width="601" />
+            <ChartCard image={img1} width="557" />
           </div>
         </Flex>
         <div>

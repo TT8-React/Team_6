@@ -10,10 +10,7 @@ import img1 from "../../assets/photos/LineChart.png";
 import img2 from "../../assets/photos/charts.png";
 
 const AllCharts = styled.div`
-  position: absolute;
-  top: 8rem;
-  left: 2rem;
-  z-index: -1;
+padding: 30px;
 `;
 
 const Environment = () => {
@@ -22,10 +19,10 @@ const Environment = () => {
       <AllCharts>
         <Flex align="center" gap="39">
           <div>
-            <ChartCard image={img1} width="601" />
+            <ChartCard image={img1} width="557" />
           </div>
           <div>
-            <ChartCard image={img1} width="601" />
+            <ChartCard image={img1} width="557" />
           </div>
         </Flex>
         <div>
