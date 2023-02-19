@@ -1,4 +1,3 @@
-
 import * as React from "react";
 import Grid from "@mui/material/Grid";
 import List from "@mui/material/List";
@@ -53,11 +52,14 @@ export default function TransferList() {
   const customList = (items) => (
     <Paper
       sx={{
+        border: "1px solid #AAAAAA",
         width: 370,
         height: 320,
         overflow: "auto",
         bgcolor: "#F2F2F2",
-        margin: "35% auto",
+        margin: "20% auto",
+
+        borderRadius: "10px",
       }}
     >
       <List dense component="div" role="list">
