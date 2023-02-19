@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
 import RightArrow from "../../assets/photos/rightArrow.png";
 import {
   AnalyticsSubMenu,
@@ -8,6 +7,7 @@ import {
   SideBarBox,
   SideBarList,
 } from "./style";
+import { StyledLink } from "./../../pages/Login/style";
 
 export default function SideBar() {
   const [ReportMenu, SetReportMenu] = useState(false);
@@ -38,13 +38,12 @@ export default function SideBar() {
             src={RightArrow}
             alt="arrow"
             onClick={HandleReport}
-            />
+          />
         </li>
         <ReportSubMenu display={ReportMenu ? "block" : "none"}>
-          <NavLink to="/report" >
+          <StyledLink to="/report">
             <li>My Report</li>
-
-          </NavLink>
+          </StyledLink>
         </ReportSubMenu>
         <li>Data upload</li>
         <li>
@@ -61,9 +60,15 @@ export default function SideBar() {
           />
         </li>
         <AnalyticsSubMenu display={AnalyticsMenu ? "block" : "none"}>
-          <li>Enviroment</li>
-          <li>Social</li>
-          <li>Governance</li>
+          <li>
+            <StyledLink to="/enviroment">Enviroment</StyledLink>
+          </li>
+          <li>
+            <StyledLink to="/social">Social</StyledLink>
+          </li>
+          <li>
+            <StyledLink to="/Governance">Governance</StyledLink>
+          </li>
         </AnalyticsSubMenu>
       </SideBarList>
     </SideBarBox>

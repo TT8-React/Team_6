@@ -11,11 +11,8 @@ import { Flex } from "../../global/style";
 
 import styled from "styled-components";
 
-const AllCharts = styled.div`
-  position: absolute;
-  top: 8rem;
-  left: 2rem;
-  z-index: -1;
+export const AllCharts = styled.div`
+padding:30px;
 `;
 
 const Dashboard = () => {

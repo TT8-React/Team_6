@@ -8,14 +8,8 @@ import img2 from "../../assets/photos/charts.png";
 
 import { Flex } from "../../global/style";
 
-import styled from "styled-components";
+import { AllCharts } from "../Dashboard";
 
-const AllCharts = styled.div`
-  position: absolute;
-  top: 8rem;
-  left: 2rem;
-  z-index: -1;
-`;
 
 const Social = () => {
   return (
@@ -23,10 +17,10 @@ const Social = () => {
       <AllCharts>
         <Flex align="center" gap="39">
           <div>
-            <ChartCard image={img1} width="601" />
+            <ChartCard image={img1} width="557" />
           </div>
           <div>
-            <ChartCard image={img1} width="601" />
+            <ChartCard image={img1} width="557" />
           </div>
         </Flex>
         <div>

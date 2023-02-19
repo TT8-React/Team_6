@@ -11,7 +11,7 @@ export const GlobalStyle = createGlobalStyle`
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter';
 }
 
 ul {
