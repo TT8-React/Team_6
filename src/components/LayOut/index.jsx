@@ -4,13 +4,13 @@ import Header from "../Header";
 import SideBar from "../SideBar";
 
 const LayOutBox = styled.div`
-  height: 100vh;
-  width: 100vw;
   display: flex;
 `;
 
 const RightBox = styled.div`
   width: calc(100% - 270px);
+  position: absolute;
+  right: 0;
 `;
 
 export default function LayOut(props) {
@@ -18,8 +18,8 @@ export default function LayOut(props) {
     <LayOutBox>
       <SideBar />
       <RightBox>
-        <Header title="Dashboard" />
-        <div> here will put the children {props.children} </div>
+        <Header title={props.title} />
+        {props.children}
       </RightBox>
     </LayOutBox>
   );
