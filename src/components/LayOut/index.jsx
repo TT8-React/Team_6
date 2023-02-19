@@ -4,20 +4,17 @@ import Header from "../Header";
 import SideBar from "../SideBar";
 
 const LayOutBox = styled.div`
+  height: 100vh;
+  width: 100vw;
   display: flex;
 `;
 
 const RightBox = styled.div`
   width: calc(100% - 270px);
-  position: absolute;
-  right: 0;
 `;
 
 export default function LayOut(props) {
   return (
-  
- 
-    
     <LayOutBox>
       <SideBar />
       <RightBox>

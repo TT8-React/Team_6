@@ -17,10 +17,12 @@ const DivImg = styled.div`
 const Img = styled.img`
   margin-left: ${(props) =>
     props.marginLeft ? props.marginLeft + "rem" : "0rem"};
+  padding: 6px;
 `;
 
 const HeadingTitle = styled.h2`
   margin-bottom: 27px;
+  font-family: "Arial";
 `;
 
 const ChartCard = ({ name, image, width, marginLeft }) => {
