@@ -7,7 +7,7 @@ import FormTitle from "../../components/FormTitle";
 import InputCard from "../../components/InputCard";
 import NavButton from "../../components/NavButton";
 
-import { DivButton, DivQuestion } from "./style";
+import { DivButton, DivQuestion, StyledLink } from "./style";
 import { NavLink } from "react-router-dom";
 
 const Login = () => {
@@ -22,10 +22,10 @@ const Login = () => {
             disc="Enter password"
             typeInput="Password"
           />
-          <NavLink to="/forgotpassword">
+            <StyledLink to="/forgotpassword">
 
           <FormQuestion Ques="Forgotpassword ?" />
-          </NavLink>
+            </StyledLink>
           <DivButton>
             <Button name="LOG IN" />
           </DivButton>
