@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const Question = styled.p`
+font-family: 'Arial';
   font-weight: 700;
   font-size: 16px;
   line-height: 19px;

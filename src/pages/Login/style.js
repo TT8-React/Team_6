@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { NavLink } from 'react-router-dom';
 
 export const DivButton = styled.div`
   display: flex;
@@ -10,4 +11,8 @@ export const DivQuestion = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+`;
+
+export const StyledLink = styled(NavLink)`
+  text-decoration: none;
 `;
