@@ -50,9 +50,12 @@ export default function SideBar() {
             <li>My Report</li>
           </StyledLink>
         </ReportSubMenu>
-        <li>Data upload</li>
+
+        <StyledLink to="/tabs">
+          <li>Data upload</li>
+        </StyledLink>
         <li onClick={HandleAnalytics}>
-          Analytics{" "}
+          Analytics
           <img
             style={
               AnalyticsMenu
@@ -74,7 +77,6 @@ export default function SideBar() {
             <StyledLink to="/Governance">Governance</StyledLink>
           </li>
         </AnalyticsSubMenu>
-
       </SideBarList>
     </SideBarBox>
   );

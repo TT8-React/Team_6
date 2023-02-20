@@ -11,7 +11,7 @@ import { Flex } from "../../global/style";
 
 import styled from "styled-components";
 
-export const AllCharts = styled.div`
+export const Container = styled.div`
 padding:30px;
 `;
 
@@ -19,7 +19,7 @@ const Dashboard = () => {
   return (
     <LayOut title="Dashboard">
       
-      <AllCharts>
+      <Container>
         <Flex align="center" gap="39">
           <div>
             <ChartCard name="Chart 1" image={img1} width="601" />
@@ -31,7 +31,7 @@ const Dashboard = () => {
         <div>
           <ChartCard name="Chart 3" image={img3} marginLeft="-2" />
         </div>
-      </AllCharts>
+      </Container>
     </LayOut>
   );
 };

@@ -4,7 +4,6 @@ import ReportCard from "../../components/ReportCard";
 import { Allreports, Styledbtn, Styledline } from "./style";
 import LayOut from "./../../components/LayOut/index";
 import NavButton from "./../../components/NavButton/index";
-import { Link } from "react-router-dom";
 import { StyledLink } from "../Login/style";
 
 const Report = () => {

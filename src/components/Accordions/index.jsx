@@ -10,9 +10,8 @@ const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
 ))(({ theme }) => ({
   border: `1px solid ${theme.palette.divider}`,
-  width: "370px",
-  marginLeft: "260px",
-  marginTop: "10px",
+  width: "350px",
+
 }));
 
 const AccordionSummary = styled((props) => (
@@ -49,7 +48,7 @@ export default function Accordions() {
   };
 
   return (
-    <div style={{ position: "absolute", left: "5%", top: "23%" }}>
+    <div >
       <Accordion
         expanded={expanded === "panel1"}
         onChange={handleChange("panel1")}
@@ -58,7 +57,6 @@ export default function Accordions() {
           <Typography
             sx={{
               fontWeight: "bold",
-              background: "#EDEDED",
             }}
           >
             Section A
@@ -95,7 +93,6 @@ export default function Accordions() {
           <Typography
             sx={{
               fontWeight: "bold",
-              background: "#EDEDED",
             }}
           >
             Section B
@@ -132,7 +129,6 @@ export default function Accordions() {
           <Typography
             sx={{
               fontWeight: "bold",
-              background: "#EDEDED",
             }}
           >
             Section C

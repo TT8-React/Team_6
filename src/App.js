@@ -15,31 +15,31 @@ import Report from "./pages/Report/index";
 import GriReport from "./pages/GriReport/index";
 import SebiReport from "./pages/SebiReport/index";
 import CustomizeReport from "./pages/CustomizeReport/index";
-import  { useAuthContext } from "./contexts/AuthContext";
+import { useAuthContext } from "./contexts/AuthContext";
 import CompanyDetails from "./pages/CompanyDetails";
+import Tabs from "./pages/Tabs/index";
 
 const App = () => {
- const { isAuthorized, setisAuthorized } = useAuthContext();
+  const { isAuthorized, setisAuthorized } = useAuthContext();
 
- 
   useEffect(() => {
     const token = localStorage.getItem("token");
     if (token) {
       setisAuthorized(true);
     }
   }, [setisAuthorized]);
-  
+
   return (
     <div>
       <Routes>
-        <Route index element={isAuthorized ? <Dashboard /> : <Login />} />
+        <Route index element={isAuthorized ? <Verified /> : <Login />} />
         <Route
           path="/login"
-          element={isAuthorized ? <Navigate to="/dashboard" /> : <Login />}
+          element={isAuthorized ? <Navigate to="/verified" /> : <Login />}
         />
         <Route
           path="/signup"
-          element={isAuthorized ? <Navigate to="/dashboard" /> : <SignUp />}
+          element={isAuthorized ? <Navigate to="/verified" /> : <SignUp />}
         />
         <Route
           path="/forgotpassword"
@@ -90,6 +90,10 @@ const App = () => {
         <Route
           path="/companyDetails"
           element={isAuthorized ? <CompanyDetails /> : <Navigate to="/Login" />}
+        />
+        <Route
+          path="/tabs"
+          element={isAuthorized ? <Tabs /> : <Navigate to="/Login" />}
         />
       </Routes>
     </div>

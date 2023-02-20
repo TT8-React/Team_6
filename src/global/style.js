@@ -26,4 +26,5 @@ export const Flex = styled.div`
   justify-content: ${(props) => (props.justify ? props.justify : "")};
   align-items: ${(props) => (props.align ? props.align : "")};
   gap: ${(props) => (props.gap ? props.gap + "px" : "")};
+  flex-wrap: ${(props) => (props.wrap)};
 `;
