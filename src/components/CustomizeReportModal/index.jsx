@@ -9,6 +9,7 @@ import {
   StyledOverlay,
 } from "./style";
 import NavButton from "../NavButton";
+import { StyledLink } from './../../pages/Login/style';
 
 const CustomizeReportModal = ({ show, handleClose }) => {
   const [fromDate, setFromDate] = useState("");
@@ -65,7 +66,10 @@ const CustomizeReportModal = ({ show, handleClose }) => {
                 />
               </InputLabel>
             </div>
+            <StyledLink to="/customizeReport">
             <NavButton name={"Continue for next step"} />
+            </StyledLink>
+
           </StyledForm>
         </div>
       </StyledModal>

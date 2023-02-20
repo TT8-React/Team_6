@@ -1,26 +1,26 @@
-import React from 'react'
-import Accordions from '../../components/Accordions'
-import LayOut from '../../components/LayOut'
-import NavButton from '../../components/NavButton'
-import ReportDetails from '../../components/ReportDetails'
-import { StyledLink } from '../Login/style'
-import { Styledbtn } from '../Report/style'
-import { Container } from './../Dashboard/index';
+import React from "react";
+import Accordions from "../../components/Accordions";
+import LayOut from "../../components/LayOut";
+import NavButton from "../../components/NavButton";
+import ReportDetails from "../../components/ReportDetails";
+import { StyledLink } from "../Login/style";
+import { Styledbtn } from "../Report/style";
+import { Container } from "./../Dashboard/index";
 
 const GriReport = () => {
   return (
     <LayOut title="Gri Report">
-<Container>
-        <StyledLink to="/report">
-      <Styledbtn>
+      <StyledLink to="/report">
+        <Styledbtn>
           <NavButton name="back" />
-      </Styledbtn>
-        </StyledLink>
+        </Styledbtn>
+      </StyledLink>
+      <Container>
         <Accordions />
         <ReportDetails />
-        </Container>
+      </Container>
     </LayOut>
   );
-}
+};
 
-export default GriReport
+export default GriReport;
