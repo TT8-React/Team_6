@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { detailCardData } from "../../mock/data";
+import { useAdminContext } from "../../contexts/AdminContext";
 
 const Card = styled.div`
   /* width: 1200px; */
@@ -30,14 +30,37 @@ const Text = styled.p`
 `;
 
 const DetailsCard = () => {
+  const { details } = useAdminContext();
   return (
     <Card>
-      {detailCardData.map((item, index) => (
-        <div key={index}>
-          <Title>{item.title}</Title>
-          <Text>{item.text}</Text>
-        </div>
-      ))}
+      <div>
+        <Title>Name</Title>
+        <Text>{details?.username}</Text>
+      </div>
+      <div>
+        <Title>Test 1</Title>
+        <Text>{details?.test1}</Text>
+      </div>
+      <div>
+        <Title>Test 2</Title>
+        <Text>{details?.test2}</Text>
+      </div>{" "}
+      <div>
+        <Title>Test 3</Title>
+        <Text>{details?.test3}</Text>
+      </div>{" "}
+      <div>
+        <Title>Test 4</Title>
+        <Text>{details?.test4}</Text>
+      </div>{" "}
+      <div>
+        <Title>Test 5</Title>
+        <Text>{details?.test5}</Text>
+      </div>{" "}
+      <div>
+        <Title>Test 6</Title>
+        <Text>{details?.test6}</Text>
+      </div>
     </Card>
   );
 };

@@ -7,14 +7,14 @@ import { StyledLink } from "../Login/style";
 
 const index = () => {
     return (
-        <Layout title="Profile details">
-            <StyledLink to="/companyDetails">
+        <Layout title="Create report">
+            <StyledLink to="/createReport">
                <Styledbtn>
                 <NavButton name="View details" />
             </Styledbtn>
             </StyledLink>
             <Styledline></Styledline>
-            <Detailsform profile/>
+            <Detailsform />
         </Layout>
     )
 }

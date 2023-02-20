@@ -19,9 +19,11 @@ const Report = () => {
 
   return (
     <LayOut title="Report">
+      <StyledLink to="/createReport">
       <Styledbtn>
         <NavButton name="create report" />
       </Styledbtn>
+      </StyledLink>
       <Styledline></Styledline>
       <Allreports>
         <StyledLink to="/sebiReport">
