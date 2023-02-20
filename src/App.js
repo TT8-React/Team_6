@@ -20,17 +20,32 @@ import ProfileDetails from "./pages/ProfileDetails/index";
 import { useAuthContext } from "./contexts/AuthContext";
 import CompanyDetails from "./pages/CompanyDetails";
 import Tabs from "./pages/Tabs/index";
-import MyReport from './pages/MyReport/index';
+import MyReport from "./pages/MyReport/index";
+import CreateReport from "./pages/CreateReport/index";
+import { useAdminContext } from "./contexts/AdminContext";
 
 const App = () => {
   const { isAuthorized, setisAuthorized } = useAuthContext();
+  const { setDetails, setReports } = useAdminContext();
 
   useEffect(() => {
     const token = localStorage.getItem("token");
     if (token) {
       setisAuthorized(true);
     }
-  }, [setisAuthorized]);
+
+    const savedDetails = JSON.parse(localStorage.getItem("savedDetails"));
+
+    if (savedDetails) {
+      setDetails(savedDetails);
+    }
+
+    const savedReports = JSON.parse(localStorage.getItem("savedReports"));
+
+    if (savedReports) {
+      setReports(savedReports);
+    }
+  }, [setisAuthorized, setDetails, setReports]);
 
   return (
     <div>
@@ -98,13 +113,17 @@ const App = () => {
           path="/tabs"
           element={isAuthorized ? <Tabs /> : <Navigate to="/Login" />}
         />
-         <Route
+        <Route
           path="/myReport"
           element={isAuthorized ? <MyReport /> : <Navigate to="/Login" />}
-/>
-          <Route
+        />
+        <Route
           path="/profileDetails"
           element={isAuthorized ? <ProfileDetails /> : <Navigate to="/Login" />}
+        />
+        <Route
+          path="/createReport"
+          element={isAuthorized ? <CreateReport /> : <Navigate to="/Login" />}
         />
       </Routes>
     </div>

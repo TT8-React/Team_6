@@ -12,14 +12,3 @@ export const detailReport = [
   { id: 11, detail: "Authorised Capital	" },
   { id: 12, detail: "Paid Up Capital" },
 ];
-
-export const detailCardData = [
-  { title: "Name", text: "Lorem ipsum" },
-
-  { title: "test1", text: "Lorem ipsum" },
-  { title: "test2", text: "Lorem ipsum" },
-  { title: "test3", text: "Lorem ipsum" },
-  { title: "test4", text: "Lorem ipsum" },
-  { title: "test5", text: "Lorem ipsum" },
-  { title: "test6", text: "Lorem ipsum" },
-];
