@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const SideBarBox = styled.div`
+font-family:'Arial';
   background-color: #efefef;
   width: 270px;
   padding: 25px 21px 25px 41px;

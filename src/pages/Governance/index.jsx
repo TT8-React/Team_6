@@ -6,17 +6,14 @@ import LayOut from "../../components/LayOut";
 import img1 from "../../assets/photos/LineChart.png";
 import img2 from "../../assets/photos/charts.png";
 
-import styled from "styled-components";
 
 import { Flex } from "../../global/style";
+import { Container } from "../Dashboard";
 
-const AllCharts = styled.div`
-padding:30px;
-`;
 const Governance = () => {
   return (
     <LayOut title="Governance">
-      <AllCharts>
+      <Container>
         <Flex align="center" gap="39">
           <div>
             <ChartCard image={img1} width="557" />
@@ -28,7 +25,7 @@ const Governance = () => {
         <div>
           <ChartCard image={img2} marginLeft="-2" />
         </div>
-      </AllCharts>
+      </Container>
     </LayOut>
   );
 };

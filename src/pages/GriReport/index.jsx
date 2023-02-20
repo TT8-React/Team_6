@@ -5,17 +5,20 @@ import NavButton from '../../components/NavButton'
 import ReportDetails from '../../components/ReportDetails'
 import { StyledLink } from '../Login/style'
 import { Styledbtn } from '../Report/style'
+import { Container } from './../Dashboard/index';
 
 const GriReport = () => {
   return (
     <LayOut title="Gri Report">
-      <Styledbtn>
+<Container>
         <StyledLink to="/report">
+      <Styledbtn>
           <NavButton name="back" />
+      </Styledbtn>
         </StyledLink>
         <Accordions />
         <ReportDetails />
-      </Styledbtn>
+        </Container>
     </LayOut>
   );
 }

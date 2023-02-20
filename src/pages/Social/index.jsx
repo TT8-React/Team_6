@@ -8,13 +8,13 @@ import img2 from "../../assets/photos/charts.png";
 
 import { Flex } from "../../global/style";
 
-import { AllCharts } from "../Dashboard";
+import { Container } from './../Dashboard/index';
 
 
 const Social = () => {
   return (
     <LayOut title="Social">
-      <AllCharts>
+      <Container>
         <Flex align="center" gap="39">
           <div>
             <ChartCard image={img1} width="557" />
@@ -26,7 +26,7 @@ const Social = () => {
         <div>
           <ChartCard image={img2} marginLeft="-2" />
         </div>
-      </AllCharts>
+      </Container>
     </LayOut>
   );
 };

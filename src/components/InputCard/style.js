@@ -15,7 +15,7 @@ export const Label = styled.label`
 
 export const Input = styled.input`
   margin-top: 8px;
-  width: 360px;
+  width:${(props)=>props.width?props.width:'360'}px;
   height: 48px;
   background: #ffffff;
   border: 2px solid #d9d9d9;
