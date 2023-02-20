@@ -15,6 +15,8 @@ import Report from "./pages/Report/index";
 import GriReport from "./pages/GriReport/index";
 import SebiReport from "./pages/SebiReport/index";
 import CustomizeReport from "./pages/CustomizeReport/index";
+import ProfileDetails from "./pages/ProfileDetails/index";
+
 import { useAuthContext } from "./contexts/AuthContext";
 import CompanyDetails from "./pages/CompanyDetails";
 import Tabs from "./pages/Tabs/index";
@@ -99,6 +101,10 @@ const App = () => {
          <Route
           path="/myReport"
           element={isAuthorized ? <MyReport /> : <Navigate to="/Login" />}
+/>
+          <Route
+          path="/profileDetails"
+          element={isAuthorized ? <ProfileDetails /> : <Navigate to="/Login" />}
         />
       </Routes>
     </div>
