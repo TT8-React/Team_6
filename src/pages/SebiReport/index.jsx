@@ -5,17 +5,21 @@ import { StyledLink } from "../Login/style";
 import { Styledbtn } from "../Report/style";
 import Accordions from "./../../components/Accordions/index";
 import ReportDetails from "./../../components/ReportDetails/index";
+import { Container } from './../Dashboard/index';
 
 const SebiReport = () => {
   return (
     <LayOut title="SEBI Report">
-      <Styledbtn>
+
         <StyledLink to="/report">
+      <Styledbtn>
           <NavButton name="back" />
+      </Styledbtn>
         </StyledLink>
+      <Container>
         <Accordions />
         <ReportDetails />
-      </Styledbtn>
+      </Container>
     </LayOut>
   );
 };

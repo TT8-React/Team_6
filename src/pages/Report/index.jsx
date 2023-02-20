@@ -30,9 +30,8 @@ const Report = () => {
         <StyledLink to="/griReport">
           <ReportCard title={"GRI report"} />
         </StyledLink>
-        <StyledLink to="/customizeReport">
+       
           <ReportCard title={"Customize report"} onClick={handleReportClick} />
-        </StyledLink>
 
         <CustomizeReportModal
           show={showCustomizeModal}
