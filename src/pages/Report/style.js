@@ -8,7 +8,6 @@ export const Styledbtn = styled.div`
 `;
 
 export const Styledline = styled.div`
-  width: 1242px;
   height: 0px;
   border: 1px solid #000000;
 `;
