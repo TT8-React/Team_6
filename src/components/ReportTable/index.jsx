@@ -5,12 +5,7 @@ import Delete from "../../assets/photos/delete.png";
 import Edit from "../../assets/photos/edit.png";
 
 const ReportBox = styled.div`
-  width: 80%;
-  height: 500px;
-  margin: 25px auto;
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
   flex-direction: column;
 `;
 
@@ -24,17 +19,23 @@ const Tr = styled.tr`
   background: #e5e5e5;
   border: 1px solid #828282;
   border-radius: 4px 0px 0px 0px;
+  & th:last-of-type{
+    text-align:center;
+
+  }
 `;
 
 const Th = styled.th`
-  font-style: normal;
+  font-family: 'Arial';
   font-weight: 700;
   font-size: 14px;
   line-height: 18px;
-  align-items: center;
+  text-align:left;
   color: #000000;
-  padding: 15px;
+  padding:15px;
   border: 1px solid #828282;
+
+
 `;
 
 const Td = styled.td`
@@ -60,18 +61,7 @@ const Img = styled.img`
   cursor: pointer;
 `;
 
-const Button = styled.button`
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 19px;
-  color: #ffffff;
-  width: 71px;
-  height: 40px;
-  background: #000000;
-  border-radius: 5px;
-  margin-bottom: 84px;
-`;
+
 
 const ReportTable = () => {
   return (

@@ -20,6 +20,7 @@ import ProfileDetails from "./pages/ProfileDetails/index";
 import { useAuthContext } from "./contexts/AuthContext";
 import CompanyDetails from "./pages/CompanyDetails";
 import Tabs from "./pages/Tabs/index";
+import MyReport from './pages/MyReport/index';
 
 const App = () => {
   const { isAuthorized, setisAuthorized } = useAuthContext();
@@ -97,6 +98,10 @@ const App = () => {
           path="/tabs"
           element={isAuthorized ? <Tabs /> : <Navigate to="/Login" />}
         />
+         <Route
+          path="/myReport"
+          element={isAuthorized ? <MyReport /> : <Navigate to="/Login" />}
+/>
           <Route
           path="/profileDetails"
           element={isAuthorized ? <ProfileDetails /> : <Navigate to="/Login" />}

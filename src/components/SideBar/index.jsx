@@ -47,13 +47,16 @@ export default function SideBar() {
         </li>
         <ReportSubMenu display={ReportMenu ? "block" : "none"}>
           <StyledLink to="/report">
-            <li>My Report</li>
+            <li>
+              <StyledLink to="/myReport">My Report</StyledLink>
+            </li>
           </StyledLink>
         </ReportSubMenu>
 
-        <StyledLink to="/tabs">
-          <li>Data upload</li>
-        </StyledLink>
+        <li>
+          <StyledLink to="/tabs">Data upload</StyledLink>
+        </li>
+
         <li onClick={HandleAnalytics}>
           Analytics
           <img
