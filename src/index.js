@@ -6,6 +6,9 @@ import { BrowserRouter } from "react-router-dom";
 import ErrorBoundary from "./components/ErrorBoundary/index";
 import AuthProvider from "./contexts/AuthContext";
 import AdminProvider from "./contexts/AdminContext";
+
+
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
