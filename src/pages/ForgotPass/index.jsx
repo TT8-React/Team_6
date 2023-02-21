@@ -4,6 +4,7 @@ import Button from "../../components/Button";
 import FormCard from "../../components/FormCard";
 import FormTitle from "../../components/FormTitle";
 import InputCard from "../../components/InputCard";
+import { StyledLink } from "../Login/style";
 
 const DivInput = styled.div`
   margin-top: 30px;
@@ -26,8 +27,11 @@ const ForgotPass = () => {
               typeInput="email"
             />
           </DivInput>
+
           <DivBtn>
-            <Button name="SUBMIT" />
+            <StyledLink to="/verification">
+              <Button name="SUBMIT" />
+            </StyledLink>
           </DivBtn>
         </form>
       </FormCard>

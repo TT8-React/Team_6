@@ -7,6 +7,7 @@ import Button from "../../components/Button";
 
 import { Flex } from "../../global/style";
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
 const Span = styled.span`
   color: #ff0000;
@@ -46,7 +47,9 @@ const Verification = () => {
             </DivParagraph>
           </Flex>
           <DivButton>
-            <Button name="SUBMIT" />
+            <NavLink to="/verified">
+              <Button name="SUBMIT" />
+            </NavLink>
           </DivButton>
         </form>
       </FormCard>
